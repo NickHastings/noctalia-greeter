@@ -55,7 +55,7 @@ if not gles2_dep.found()
 endif
 
 stb_dep = declare_dependency(
-  include_directories: include_directories('third_party/stb', is_system: true),
+  include_directories: include_directories(get_option('stb_headers'), is_system: true),
 )
 
 libwebp_dep = dependency('libwebp', required: true)

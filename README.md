@@ -102,8 +102,11 @@ sudo xbps-install meson ninja pkg-config git \
 
 Vendored dependencies, with no system package needed: `nlohmann/json`, `stb`, and `Wuffs`.
 
-Dependencies that are vendored by default, with a meson option to
-instead use the system package: `tomlplusplus`
+Dependencies that are vendored by default, with a meson boolean to
+instead use the system package: `tomlplusplus`. `stb` is also vendored
+by default, but since it ships no pkg-config file it is switched by
+pointing at system headers (e.g. `-Dstb_headers=/usr/include/stb`)
+rather than a boolean toggle.
 
 Build requires `wlroots-0.20` and `wayland-server` development packages (see distro lists above).
 

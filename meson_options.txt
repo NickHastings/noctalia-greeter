@@ -1,1 +1,2 @@
 option('system_tomlplusplus', type: 'boolean', value: false, description: 'Use system tomlplusplus instead of vendored')
+option('stb_headers', type: 'string', value: 'third_party/stb', description: 'Path to stb header files')
