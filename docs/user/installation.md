@@ -142,8 +142,10 @@ systemctl status display-manager.service
 ```
 
 Service unit names vary. The actual unit may be `gdm.service`, `sddm.service`,
-`lightdm.service`, or something else. Disable the unit shown on your system;
-do not copy one of these examples without checking:
+`lightdm.service`, or something else. If the unit is already `greetd.service`
+proceed to the step [Enable greetd](#5-enable-greetd).
+
+Disable the unit shown on your system; do not copy one of these examples without checking:
 
 ```sh
 sudo systemctl disable --now UNIT.service
